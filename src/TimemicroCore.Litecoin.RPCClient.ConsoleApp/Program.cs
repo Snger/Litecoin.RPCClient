@@ -11,9 +11,9 @@ namespace TimemicroCore.Litecoin.RPCClient.ConsoleApp
         {
             Console.WriteLine("Hello World!");
 
-            Console.WriteLine(new GetBalanceParams() { Account = "mattf"});
+            Console.WriteLine(new GetBalanceParams() { Account = "mattf" });
 
-            JsonRPCClient client = new JsonRPCClient("http://127.0.0.1:19332", "litecoinrpc", "123456");
+            JsonRPCClient client = new JsonRPCClient("http://127.0.0.1:19332", "litecoinrpc", "123456", "");
             /*
            var resp0 = client.Call<GetNewAddressResponse>(JsonRPCMethods.GetNewAddress, new GetNewAddressParams());
            Console.WriteLine(resp0);

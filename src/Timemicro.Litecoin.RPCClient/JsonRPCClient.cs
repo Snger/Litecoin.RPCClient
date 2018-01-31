@@ -16,11 +16,14 @@ namespace Timemicro.Litecoin.RPCClient
 
         private string rpcpassword;
 
-        public JsonRPCClient(string rpcurl, string rpcuser, string rpcpassword)
+        public string WalletPassphrase { get; }
+
+        public JsonRPCClient(string rpcurl, string rpcuser, string rpcpassword,string walletPassphrase)
         {
             this.rpcurl = rpcurl;
             this.rpcuser = rpcuser;
             this.rpcpassword = rpcpassword;
+            this.WalletPassphrase = walletPassphrase;
         }
 
         public string Call(string method, params object[] parameters)
